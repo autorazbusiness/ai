@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoRaz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body { font-family: 'Cairo', sans-serif; line-height:1.6; color:#333; scroll-behavior: smooth; }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px 60px 20px;
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+
+    /* Sections */
+    section { padding: 80px 20px; text-align: center; }
+    section h2 { font-size: 2.5em; margin-bottom: 20px; color:#0d6efd; }
+
+    /* Features */
+    #features p { font-size: 1.2em; max-width: 700px; margin: auto; }
+
+    /* Pricing */
+    .pricing { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      width: 280px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+    .card h3 { color:#6610f2; margin-bottom: 15px; }
+    .card p { font-size: 1.1em; margin-bottom: 15px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #0d6efd;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #6610f2; }
+
+    /* Contact */
+    #contact p { font-size: 1.2em; }
+
+    /* Footer */
+    footer { background: #333; color: #fff; padding: 30px 20px; }
+
+    @media(max-width: 900px){ .pricing { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AutoRaz</h1>
+  <p>أفضل حلول الشات الذكي باستخدام الذكاء الاصطناعي</p>
+</header>
+
+<section id="features">
+  <h2>مميزاتنا</h2>
+  <p>واجهة سهلة وسريعة، دعم فني 24/7، تقارير متقدمة وتحليلات دقيقة، حماية عالية وخصوصية كاملة لمستخدميك.</p>
+</section>
+
+<section id="pricing">
+  <h2>الأسعار</h2>
+  <div class="pricing">
+    <div class="card">
+      <h3>الأساسي</h3>
+      <p>50 ريال / شهر</p>
+      <p>دعم محدود، ميزات أساسية</p>
+      <a href="#" class="btn">اشتراك</a>
+    </div>
+    <div class="card">
+      <h3>المتقدم</h3>
+      <p>150 ريال / شهر</p>
+      <p>جميع ميزات الأساسي + تقارير متقدمة</p>
+      <a href="#" class="btn">اشتراك</a>
+    </div>
+    <div class="card">
+      <h3>الاحترافي</h3>
+      <p>300 ريال / شهر</p>
+      <p>جميع الميزات + دعم VIP وتحليلات متقدمة</p>
+      <a href="#" class="btn">اشتراك</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>تواصل معنا</h2>
+  <p>البريد الإلكتروني: contact@autoraz.com</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 AutoRaz. جميع الحقوق محفوظة.</p>
+</footer>
+
+</body>
+</html>
