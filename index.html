@@ -9,7 +9,9 @@
     /* Reset */
     * { margin:0; padding:0; box-sizing: border-box; }
     body { font-family: 'Cairo', sans-serif; line-height:1.6; color:#333; scroll-behavior: smooth; }
-
+:root {
+  --brand-blue: #0d6efd;
+}
 /* Header */
 header {
   background:#fff;
@@ -50,14 +52,14 @@ header {
 }
 
 .menu a:hover {
-  color:#0d6efd;
+  color: var(--brand-blue);
 }
 
 /* Language */
 .lang-btn {
   cursor:pointer;
   font-weight:600;
-  color:#0d6efd;
+  color: var(--brand-blue);
 }
 
 /* Burger (mobile) */
@@ -187,7 +189,8 @@ header {
       border-radius: 50px;
       transition: background 0.3s;
     }
-    .btn:hover { background: #6610f2; }
+    .btn:hover { background: var(--brand-blue);
+ }
 
     /* Contact */
     #contact p { font-size: 1.2em; }
