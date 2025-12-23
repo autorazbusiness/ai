@@ -93,7 +93,56 @@ header {
     /* Sections */
     section { padding: 80px 20px; text-align: center; }
     section h2 { font-size: 2.5em; margin-bottom: 20px; color:#0d6efd; }
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url("assets/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Text content */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
     /* Features */
     #features p { font-size: 1.2em; max-width: 700px; margin: auto; }
 
@@ -155,7 +204,14 @@ header {
 
   </div>
 </header>
+<section class="hero">
+  <div class="hero-overlay"></div>
 
+  <div class="hero-content">
+    <h1>حلول ذكية لأتمتة أعمالك</h1>
+    <p>نحو تجربة عملاء أفضل باستخدام الذكاء الاصطناعي</p>
+  </div>
+</section>
 
 <section id="features">
   <h2>مميزاتنا</h2>
