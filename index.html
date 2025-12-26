@@ -107,7 +107,14 @@ header {
   align-items: center;
   justify-content: center;
 }
+.fade-in {
+  transition: all 0.8s ease-out;
+}
 
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Dark overlay */
 .hero-overlay {
   position: absolute;
@@ -333,15 +340,24 @@ header {
       تواصل معنا
     </a>
   </div>
-</section>
-  <section id="vision" style="background:#f9f9f9; padding:80px 20px; text-align:center;">
-  <h2 style="color:var(--brand-blue); font-size:2.5rem; margin-bottom:20px;">رؤيتنا</h2>
-  <p style="max-width:700px; margin:auto; font-size:1.2rem; color:#555; line-height:1.8;">
+
+    <section id="vision" style="background: linear-gradient(135deg, #e6f0ff, #f9f9f9); padding:100px 20px; text-align:center; position:relative;">
+  <!-- أيقونات صغيرة فوق العنوان -->
+  <div style="display:flex; justify-content:center; gap:20px; margin-bottom:20px;">
+    <i class="fas fa-rocket" style="font-size:2rem; color:var(--brand-blue);"></i>
+    <i class="fas fa-lightbulb" style="font-size:2rem; color:var(--brand-blue);"></i>
+    <i class="fas fa-cogs" style="font-size:2rem; color:var(--brand-blue);"></i>
+  </div>
+
+  <h2 style="color:var(--brand-blue); font-size:2.8rem; margin-bottom:20px; opacity:0; transform:translateY(20px);" class="fade-in">رؤيتنا</h2>
+
+  <p style="max-width:750px; margin:auto; font-size:1.25rem; color:#555; line-height:1.8; opacity:0; transform:translateY(20px);" class="fade-in">
     هدفنا أن تستخدم جميع الشركات أحدث تقنيات الذكاء الاصطناعي لتطوير أعمالها،  
     وزيادة نموها وتقليل تكاليفها.  
     نحن نؤمن أن الذكاء الاصطناعي ليس فقط حاضر الأعمال، بل هو مستقبلها.
   </p>
 </section>
+    
 <section id="features">
   <h2 class="h2">لماذا يشترك عملاؤنا معنا؟</h2>
   <div class="features-container">
@@ -441,6 +457,17 @@ header {
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
   }
+
+  /* JavaScript لتفعيل التأثير عند النزول للقسم */
+window.addEventListener('scroll', function() {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+});
+
 </script>
 </body>
 </html>
