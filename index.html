@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AutoRaz</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Reset */
     * { margin:0; padding:0; box-sizing: border-box; }
@@ -234,7 +235,24 @@ header {
 }
     /* Contact */
     #contact p { font-size: 1.2em; }
+.email-link {
+  text-decoration: none;
+  color: var(--brand-blue);
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s, color 0.3s;
+}
 
+.email-link:hover {
+  color: #0051a3;
+  transform: translateY(-3px);
+}
+
+.email-link i {
+  font-size: 1.4rem;
+}
     /* Footer */
     footer { background: #333; color: #fff; padding: 30px 20px; }
 
@@ -331,9 +349,9 @@ header {
 
 <section id="contact">
   <h2>تواصل معنا</h2>
-  <p>
-    <a href="mailto:autoraz.business@gmail.com" style="text-decoration:none; color:#333; display:flex; align-items:center; justify-content:center; gap:8px;">
-      📧 autoraz.business@gmail.com
+  <p style="text-align:center;">
+    <a href="mailto:autoraz.business@gmail.com" class="email-link">
+      <i class="fas fa-envelope"></i> autoraz.business@gmail.com
     </a>
   </p>
 </section>
