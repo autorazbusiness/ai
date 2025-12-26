@@ -233,6 +233,12 @@ header {
 .card .btn {
   margin-top: auto;
 }
+    .price {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  font-weight: bold;
+  color: var(--brand-blue);
+}
     /* Contact */
     #contact p { font-size: 1.2em; }
 .email-link {
@@ -312,7 +318,7 @@ header {
   <div class="pricing">
     <div class="card">
       <h3>الأساسي</h3>
-      <p>300 ريال / شهر</p>
+      <p><span class="price">300</span> ريال / شهر</p>
       <p>شات واتس اب</p>
       <p>500 رسالة</p>
       <p>24/7</p>
