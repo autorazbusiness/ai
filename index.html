@@ -443,6 +443,7 @@ header {
   <p>&copy; 2025 AutoRaz جميع الحقوق محفوظة</p>
 </footer>
 <script>
+  // تبديل اللغة والقائمة
   let isArabic = true;
 
   function toggleLang() {
@@ -457,19 +458,16 @@ header {
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
   }
-</script>
 
-  /* JavaScript لتفعيل التأثير عند النزول للقسم */
-  <script>
-window.addEventListener('scroll', function() {
-  document.querySelectorAll('.fade-in').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 50) {
-      el.classList.add('visible');
-    }
+  // تأثير fade-in عند التمرير
+  window.addEventListener('scroll', function() {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 50) {
+        el.classList.add('visible');
+      }
+    });
   });
-});
-
 </script>
 </body>
 </html>
