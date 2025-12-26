@@ -200,7 +200,39 @@ header {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
     /* Features */
-    #features p { font-size: 1.2em; max-width: 700px; margin: auto; }
+   .features-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.feature {
+  text-align: center;
+  max-width: 250px;
+}
+
+.feature i {
+  font-size: 3rem;
+  color: var(--brand-blue);
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.feature i:hover {
+  transform: scale(1.2);
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #777;
+}
 
     /* Pricing */
     .pricing { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
@@ -305,8 +337,25 @@ header {
   
 <section id="features">
   <h2>لماذا يشترك عملاؤنا معنا؟</h2>
-  <p>توفير موظف ذكي يعمل 24 ساعة / 7 أيام في الأسبوع لأتمتة مهام شركتك بأقل التكاليف</p>
+  <div class="features-container">
+    <div class="feature">
+      <i class="fas fa-robot"></i>
+      <h3>أتمتة ذكية</h3>
+      <p>موظف ذكي يعمل 24 ساعة لأتمتة مهام شركتك.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-headset"></i>
+      <h3>دعم مستمر</h3>
+      <p>خدمة عملاء متوفرة 24/7 لضمان تجربة سلسة.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-chart-line"></i>
+      <h3>تحليلات دقيقة</h3>
+      <p>مراقبة أداء الشات وتحسين تجربة العملاء بسهولة.</p>
+    </div>
+  </div>
 </section>
+
 
 <section id="pricing">
   <h2 class="h2">خطط الإشتراك</h2>
