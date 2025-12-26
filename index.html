@@ -111,7 +111,39 @@ header {
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
 }
+/* Popular Plan */
+.card.popular {
+  border: 2px solid var(--brand-blue);
+  transform: scale(1.05);
+  position: relative;
+}
 
+.card.popular:hover {
+  transform: scale(1.08);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand-blue);
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.card.popular .btn {
+  background: #003f7f;
+}
+/* Mobile fix */
+@media(max-width:900px){
+  .card.popular {
+    transform: none;
+  }
+}
 /* Text content */
 .hero-content {
   position: relative;
@@ -148,7 +180,7 @@ header {
     /* Hero Button */
 .hero-btn {
   display: inline-block;
-  margin-top: 55px;
+  margin-top: 45px;
   padding: 14px 36px;
   background-color: var(--brand-blue);
   color: #fff;
@@ -264,23 +296,21 @@ header {
       <p>شات واتس اب</p>
       <p>500 رسالة</p>
       <p>24/7</p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <a href="#" class="btn">اشتراك</a>
+    
+      <a   href="https://wa.me/966506564825?text=أرغب%20بالاشتراك%20في%20الباقة%20الأساسية"
+ class="btn">اشتراك</a>
     </div>
-    <div class="card">
+      <div class="card popular">
+  <span class="badge">الأكثر طلبًا</span>
       <h3>المتقدم</h3>
       <p>500 ريال / شهر</p>
             <p>شات واتس اب</p>
             <p>شات موقع الكتروني</p>
       <p>1000 رسالة</p>
       <p>24/7</p>
-       <p></p>
-      <p></p>
-      <p></p>
-      <a href="#" class="btn">اشتراك</a>
+       
+      <a   href="https://wa.me/966506564825?text=أرغب%20بالاشتراك%20في%20الباقة%20المتقدمة"
+ class="btn">اشتراك</a>
     </div>
     <div class="card">
       <h3>الاحترافي</h3>
@@ -290,9 +320,9 @@ header {
             <p>نظام اتمته مخصص </p>
       <p>10,000 رسالة</p>
       <p>24/7</p>
-      <p>نظام اتمته مخصص </p>
-       <p></p>
-      <a href="#" class="btn">اشتراك</a>
+      <p>نظام أتمتة مخصص </p>
+      <a   href="https://wa.me/966506564825?text=أرغب%20بالاشتراك%20في%20الباقة%20الاحترافية"
+ class="btn">اشتراك</a>
     </div>
   </div>
 </section>
