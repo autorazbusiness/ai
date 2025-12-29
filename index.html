@@ -47,15 +47,33 @@ header {
 }
 
 .menu a {
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brand-blue);
+  transition: width 0.3s ease;
 }
 
 .menu a:hover {
   color: var(--brand-blue);
 }
 
+.menu a:hover::after {
+  width: 100%;
+}
+.menu a.active {
+  color: var(--brand-blue);
+    transform: scale(0.95);
+}
+    
 /* Language */
 .lang-btn {
   cursor:pointer;
@@ -524,6 +542,28 @@ header {
       }
     });
   });
+
+   const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".menu a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
 </script>
 </body>
 </html>
