@@ -346,6 +346,14 @@ header {
     footer { background: #333; color: #fff; padding: 30px 20px; }
 
     @media(max-width: 900px){ .pricing { flex-direction: column; align-items: center; } }
+
+    section {
+  scroll-margin-top: 120px;
+}
+
+    .menu a.active {
+  color: var(--brand-blue);
+}
   </style>
 </head>
 <body>
@@ -360,6 +368,7 @@ header {
 
     <!-- Menu -->
     <div class="menu" id="menu">
+      <a href="#home">الرئيسية</a>
       <a href="#vision" id="navVision">رؤيتنا</a>
       <a href="#pricing" id="navPricing">الأسعار</a>
       <a href="#contact" id="navContact">تواصل معنا</a>
@@ -374,7 +383,7 @@ header {
   </div>
 </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
