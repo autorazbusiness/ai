@@ -16,12 +16,13 @@
 }
 /* Header */
 header {
-  background:#fff;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  padding:15px 40px;
-  position:sticky;
-  top:0;
-  z-index:100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  padding: 14px 48px;
 }
 
 /* Navbar */
@@ -33,7 +34,7 @@ header {
 
 /* Logo */
 .logo img {
-  height:82px;
+  height:72px;
   transition:transform 0.3s;
 }
 
@@ -44,11 +45,16 @@ header {
 /* Menu */
 .menu {
   display:flex;
-  gap:25px;
+  align-items: center;
+  gap: 32px;
 }
 
 .menu a {
   position: relative;
+	font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 0;
   transition: color 0.3s ease;
 }
 
@@ -72,14 +78,27 @@ header {
 }
 .menu a.active {
   color: var(--brand-blue);
-    transform: scale(0.95);
+  font-weight: 700;
+}
+	  .menu a.active::after {
+  width: 100%;
 }
     
 /* Language */
 .lang-btn {
-  cursor:pointer;
-  font-weight:600;
+  font-weight: 600;
   color: var(--brand-blue);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.lang-btn:hover {
+  background: rgba(0, 104, 202, 0.1);
+}
+	  .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 /* Burger (mobile) */
