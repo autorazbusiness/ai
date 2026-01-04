@@ -248,6 +248,8 @@ header {
   color: var(--brand-blue);
   font-size: 2.5rem;
   margin-bottom: 20px;
+	opacity: 0;
+  transition: all 0.8s ease;
 }
 
 .vision-section p {
@@ -256,6 +258,8 @@ header {
   font-size: 1.25rem;
   color: #555;
   line-height: 1.8;
+	opacity: 0;
+  transition: all 0.8s ease;
 }
 
 /* Fade-in */
@@ -268,6 +272,11 @@ header {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+	  .fade-in.visible p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }
     /* Features */
    .features-container {
@@ -593,22 +602,23 @@ header {
    const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".menu a");
 
-  window.addEventListener("scroll", () => {
-    let current = "";
+function handleFadeIn() {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+}
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
+window.addEventListener('scroll', handleFadeIn);
+handleFadeIn();
 
     navLinks.forEach(link => {
       link.classList.remove("active");
       if (link.getAttribute("href") === "#" + current) {
         link.classList.add("active");
       }
-    });
   });
 
 </script>
